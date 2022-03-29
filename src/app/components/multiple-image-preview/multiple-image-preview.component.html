@@ -1,0 +1,9 @@
+<input type="file" multiple (change)="detectFiles($event)" accept="image/*" />
+<div class="spacing">
+  <!-- <img *ngFor="let url of urls" [src]="url" width="180" /> -->
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let url of urls">
+      <img [src]="url" class="tile-image" />
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
